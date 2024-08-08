@@ -105,12 +105,13 @@ insect_y3
 ## Practice for loops...
 
 ```{r}
-years <- seq(from = 1, to = 1, by = 1)
+years <- seq(from = 1, to = 10, by = 1)
 insect_y0 <- c(12000, 700, 500)
-  
+
+x <- insect_leslie %*% insect_y0   
 for(year in years) {
-  insect_y_new <- insect_leslie %*% insect_y0
-  print(insect_y_new)
+  x <- insect_leslie %*% x
+  print(x)
 }
 ```
 
